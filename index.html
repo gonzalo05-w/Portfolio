@@ -444,7 +444,7 @@ Soy una persona comprometida con el trabajo, responsable, resiliente, me adapto 
       </div>
 
     </section><!-- /Services Section -->
-    <!-- Contact Section -->
+   <!-- Contact Section -->
     <section id="contact" class="contact section">
 
       <!-- Section Title -->
@@ -457,6 +457,7 @@ Soy una persona comprometida con el trabajo, responsable, resiliente, me adapto 
 
         <div class="row gy-4">
 
+          <!-- Columna Izquierda: Información de contacto -->
           <div class="col-lg-5">
 
             <div class="info-wrap">
@@ -486,6 +487,45 @@ Soy una persona comprometida con el trabajo, responsable, resiliente, me adapto 
 
             </div>
           </div>
+          
+          <!-- Columna Derecha: Formulario de Contacto (NUEVO) -->
+          <div class="col-lg-7">
+            <form action="https://formsubmit.co/gonzalobretongarcia05@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Tu Nombre</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Tu Correo</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Asunto</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Mensaje</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <!-- Configuraciones internas de FormSubmit -->
+                  <input type="hidden" name="_subject" value="Nuevo mensaje desde tu Portfolio!">
+                  <input type="hidden" name="_next" value="https://gonzalo05-w.github.io/Portfolio/">
+                  <input type="hidden" name="_captcha" value="false">
+                  
+                  <button type="submit">Enviar Mensaje</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
         </div>
 
       </div>
