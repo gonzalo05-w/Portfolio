@@ -26,107 +26,62 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
   <!-- =======================================================
-  * TEMA TECH / HACKER (Modo Oscuro + Neón + Tarjetas 3D)
+  * TEMA MODO OSCURO SUAVE (Tarjetas 3D elegantes)
   ======================================================== -->
   <style>
-    /* 1. Fondo de la página y textos base */
+    /* 1. Fondo de la página y textos base suaves */
     body, .main, .section, .light-background {
-      background-color: #0d1117 !important; /* Fondo tipo terminal oscuro */
-      color: #c9d1d9 !important; /* Texto gris claro para que no canse la vista */
+      background-color: #0d1117 !important; /* Fondo oscuro elegante */
+      color: #c9d1d9 !important; /* Texto gris claro para no cansar la vista */
     }
-    p, li, span {
+    p, li, span, h5 {
       color: #c9d1d9 !important;
     }
 
-    /* 2. Color de acento (Verde Neón) y tipografías */
-    h1, h2, h3, h4, h5, h6 {
-      color: #39ff14 !important; /* Verde Neón Hacker */
-      font-family: 'Courier New', Courier, monospace !important; /* Toque consola */
-      text-shadow: 0 0 5px rgba(57, 255, 20, 0.3);
+    /* 2. Color de acento (Azul suave) */
+    h2, h3, h4 {
+      color: #58a6ff !important; /* Azul amigable y moderno */
     }
     a {
-      color: #00ffff !important; /* Cyan para enlaces */
+      color: #58a6ff !important;
       text-decoration: none;
     }
     a:hover {
-      color: #39ff14 !important;
-      text-shadow: 0 0 8px #39ff14;
+      color: #79c0ff !important;
     }
 
     /* Títulos de sección */
+    .section-title h2 {
+      color: #58a6ff !important;
+    }
     .section-title h2::after {
-      background: #39ff14 !important;
-      box-shadow: 0 0 10px #39ff14;
+      background: #58a6ff !important;
     }
 
-    /* 3. Barra lateral (Menú izquierdo llamativo) */
-    .header {
-      background: linear-gradient(180deg, #050a0f 0%, #001a00 100%) !important;
-      border-right: 2px solid #39ff14;
-      box-shadow: 5px 0 15px rgba(57, 255, 20, 0.1) !important;
-    }
-    .profile-img img {
-      border: 4px solid #39ff14 !important;
-      box-shadow: 0 0 20px rgba(57, 255, 20, 0.6) !important;
-    }
-    .navmenu a {
-      color: #88cc88 !important;
-    }
-    .navmenu a:hover, .navmenu a.active {
-      color: #39ff14 !important;
-      background: rgba(57, 255, 20, 0.1) !important;
-      border-radius: 5px;
-    }
-    .navmenu a:hover i, .navmenu a.active i {
-      color: #39ff14 !important;
-    }
-
-    /* Redes sociales */
-    .social-links a {
-      background: #111 !important;
-      border: 1px solid #39ff14 !important;
-      color: #39ff14 !important;
-    }
-    .social-links a:hover {
-      background: #39ff14 !important;
-      color: #000 !important;
-      box-shadow: 0 0 15px #39ff14 !important;
-    }
-
-    /* 4. Efecto Hero (Portada interactiva) */
-    #hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0, 15, 0, 0.8) !important; /* Filtro oscuro/verdoso sobre tu imagen */
-      z-index: 1;
-    }
-    #hero img {
-      filter: grayscale(100%) contrast(150%) !important;
-    }
-    #hero .container {
-      position: relative;
-      z-index: 2;
+    /* 3. Nombre del hero en blanco (como pediste) y detalles del Hero */
+    #hero h2 {
+      color: #ffffff !important; 
     }
     #hero p span {
-      color: #00ffff !important; /* Tipeo en cyan */
+      color: #58a6ff !important; /* Efecto tipeo en azul claro */
     }
     .typed-cursor {
-      color: #39ff14 !important;
+      color: #58a6ff !important;
     }
 
-    /* 5. Estructura visual de Tarjetas 3D (Cards) */
+    /* 4. Estructura visual de Tarjetas 3D (Cards) */
     .about .content, 
     .resume-item, 
     .service-item, 
     .info-item, 
     .php-email-form {
-      background: #161b22 !important; /* Gris panel oscuro */
+      background: #161b22 !important; /* Gris panel un poco más claro que el fondo */
       padding: 25px !important;
       border-radius: 12px !important;
-      border: 1px solid rgba(57, 255, 20, 0.2) !important;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(57, 255, 20, 0.02) !important;
+      border: 1px solid #30363d !important; /* Borde muy sutil */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
     }
     
@@ -135,77 +90,75 @@
     .resume-item:hover, 
     .service-item:hover, 
     .info-item:hover {
-      transform: translateY(-8px) !important;
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(57, 255, 20, 0.1) !important;
-      border-color: #39ff14 !important;
+      transform: translateY(-5px) !important; /* Se eleva suavemente */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+      border-color: #58a6ff !important; /* El borde se ilumina en azul al pasar el ratón */
     }
 
     /* Sobrescribir iconos de servicios */
     .service-item .icon {
       background: transparent !important;
-      border: 2px solid #39ff14 !important;
-      color: #39ff14 !important;
-      box-shadow: 0 0 10px rgba(57, 255, 20, 0.2) !important;
+      border: 2px solid #58a6ff !important;
+      color: #58a6ff !important;
     }
     .service-item:hover .icon {
-      background: #39ff14 !important;
-      color: #000 !important;
-      box-shadow: 0 0 20px rgba(57, 255, 20, 0.8) !important;
+      background: #58a6ff !important;
+      color: #0d1117 !important; /* El icono se invierte al pasar el ratón */
     }
 
-    /* 6. Habilidades (Iconos inline sobreescritos) */
+    /* 5. Habilidades (Iconos inline) */
     .icon-box {
       background: #161b22 !important;
-      border: 1px solid #00ffff !important;
-      color: #00ffff !important;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2) !important;
+      border: 1px solid #58a6ff !important;
+      color: #58a6ff !important;
       transition: all 0.3s ease !important;
     }
     .d-flex.align-items-center:hover .icon-box {
-      background: #00ffff !important;
-      color: #000 !important;
-      box-shadow: 0 0 15px #00ffff !important;
+      background: #58a6ff !important;
+      color: #0d1117 !important;
       transform: scale(1.1);
+    }
+    
+    #skills h4 {
+      color: #58a6ff !important;
+      font-weight: 700;
     }
 
     /* Línea del tiempo del currículum */
     .resume .resume-item::before {
       background: #161b22 !important;
-      border: 2px solid #39ff14 !important;
+      border: 2px solid #58a6ff !important;
     }
     .resume .resume-item::after {
-      background: #39ff14 !important;
+      background: #58a6ff !important;
     }
     .resume .resume-title {
-      color: #00ffff !important;
+      color: #ffffff !important;
     }
 
-    /* 7. Formulario tech */
+    /* 6. Formulario elegante */
     .php-email-form input, 
     .php-email-form textarea {
       background: #0d1117 !important;
-      border: 1px solid #444 !important;
-      color: #39ff14 !important;
+      border: 1px solid #30363d !important;
+      color: #c9d1d9 !important;
     }
     .php-email-form input:focus, 
     .php-email-form textarea:focus {
-      border-color: #39ff14 !important;
-      box-shadow: 0 0 8px rgba(57, 255, 20, 0.4) !important;
+      border-color: #58a6ff !important;
     }
     .php-email-form button[type=submit] {
       background: transparent !important;
-      color: #39ff14 !important;
-      border: 2px solid #39ff14 !important;
+      color: #58a6ff !important;
+      border: 2px solid #58a6ff !important;
       border-radius: 5px !important;
       font-weight: bold;
       padding: 10px 30px !important;
-      box-shadow: 0 0 10px rgba(57, 255, 20, 0.2) !important;
       transition: all 0.3s;
     }
     .php-email-form button[type=submit]:hover {
-      background: #39ff14 !important;
-      color: #000 !important;
-      box-shadow: 0 0 20px rgba(57, 255, 20, 0.6) !important;
+      background: #58a6ff !important;
+      color: #0d1117 !important;
     }
   </style>
 </head>
@@ -302,52 +255,52 @@
         <div class="row">
           <!-- COLUMNA 1 -->
           <div class="col-lg-6">
-            <h4 class="mb-4" style="color: #173b6c; font-weight: 700;">Lenguajes de programación</h4>
+            <h4 class="mb-4">Lenguajes de programación</h4>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-cup-hot fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">Java</span>
             </div>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-filetype-py fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">Python</span>
             </div>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-terminal fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">Bash</span>
             </div>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-filetype-js fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">JavaScript</span>
             </div>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-braces fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">Mustache</span>
             </div>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-bootstrap fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">Bootstrap</span>
             </div>
 
             <div class="d-flex align-items-center mb-5">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-gear-wide-connected fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">SpringBoot</span>
@@ -356,56 +309,56 @@
         
           <!-- COLUMNA 2 -->
           <div class="col-lg-6">
-            <h4 class="mb-4" style="color: #173b6c; font-weight: 700;">Lenguajes orientados a la web</h4>
+            <h4 class="mb-4">Lenguajes orientados a la web</h4>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-filetype-html fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">HTML</span>
             </div>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-filetype-css fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">CSS</span>
             </div>
 
             <div class="d-flex align-items-center mb-5">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-filetype-xml fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">XML</span>
             </div>
 
-            <h4 class="mb-4" style="color: #173b6c; font-weight: 700;">Bases de datos</h4>
+            <h4 class="mb-4">Bases de datos</h4>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-database fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">SQL</span>
             </div>
 
             <div class="d-flex align-items-center mb-5">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-database-gear fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">Procedimientos y Funciones MySQL</span>
             </div>
 
-            <h4 class="mb-4" style="color: #173b6c; font-weight: 700;">Habilidades físicas</h4>
+            <h4 class="mb-4">Habilidades físicas</h4>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-diagram-3 fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">Subnetting IPv4 / IPv6</span>
             </div>
 
             <div class="d-flex align-items-center mb-3">
-              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; background: #e4f4fb; border-radius: 50%; color: #149ddd; margin-right: 15px;">
+              <div class="icon-box d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 15px;">
                 <i class="bi bi-router fs-5"></i>
               </div>
               <span style="font-weight: 600; text-transform: uppercase;">Configuración Cisco y Redes</span>
@@ -620,7 +573,6 @@
           </div>
           
           <div class="col-lg-7">
-            <!-- Formulario modificado -->
             <form action="https://formsubmit.co/gonzalobretongarcia05@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
                 <div class="col-md-6">
