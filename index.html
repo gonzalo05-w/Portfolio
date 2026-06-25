@@ -33,16 +33,16 @@
   <style>
     /* 1. Fondo de la página y textos base */
     body, .main, .section, .light-background {
-      background-color: #1e1e1e !important; /* Gris oscuro elegante */
-      color: #a3a3a3 !important; /* Gris suave para los textos largos */
+      background-color: #1e1e1e !important; 
+      color: #a3a3a3 !important; 
     }
     p, li, span, h5 {
-      color: #d4d4d4 !important; /* Blanco apagado para mejor lectura */
+      color: #d4d4d4 !important; 
     }
 
     /* 2. Color acento: Verde terminal MATE */
     h2, h3, h4 {
-      color: #22c55e !important; /* Verde suave y moderno */
+      color: #22c55e !important; 
       font-family: 'Courier New', Courier, monospace !important; 
       text-shadow: none !important; 
     }
@@ -98,13 +98,11 @@
     /* 5. Estructura visual de Tarjetas 3D MATE (Cards) */
     .about .content, 
     .resume-item, 
-    .service-item, 
-    .info-item, 
-    .php-email-form {
-      background: #2d2d2d !important; /* Gris un poco más claro para las tarjetas */
+    .service-item {
+      background: #2d2d2d !important; 
       padding: 25px !important;
       border-radius: 12px !important;
-      border: 1px solid #3d3d3d !important; /* Borde acorde al fondo */
+      border: 1px solid #3d3d3d !important; 
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important; 
       transition: transform 0.3s ease, border-color 0.3s ease !important;
     }
@@ -112,8 +110,7 @@
     /* Hover 3D interactivo */
     .about .content:hover, 
     .resume-item:hover, 
-    .service-item:hover, 
-    .info-item:hover {
+    .service-item:hover {
       transform: translateY(-5px) !important;
       border-color: #22c55e !important; 
     }
@@ -161,19 +158,66 @@
       color: #ffffff !important;
     }
 
-    /* 7. Formulario */
-    .php-email-form input, 
-    .php-email-form textarea {
-      background: #1e1e1e !important; /* Fondo del input oscuro */
-      border: 1px solid #444444 !important;
-      color: #ffffff !important;
+    /* =========================================
+       7. SECCIÓN DE CONTACTO (Forzar estilos)
+       ========================================= */
+
+    /* Caja izquierda (Dirección, Email, etc.) */
+    .contact .info-wrap {
+      background-color: #2d2d2d !important;
+      padding: 30px !important;
+      border-radius: 12px !important;
+      border: 1px solid #3d3d3d !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+      transition: transform 0.3s ease, border-color 0.3s ease !important;
     }
-    .php-email-form input:focus, 
-    .php-email-form textarea:focus {
+    .contact .info-wrap:hover {
+      transform: translateY(-5px) !important;
+      border-color: #22c55e !important; 
+    }
+    .contact .info-item {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    .contact .info-item h3 {
+      color: #ffffff !important; /* Títulos en blanco */
+    }
+    .contact .info-item p {
+      color: #d4d4d4 !important; /* Textos en blanco/gris claro */
+    }
+    .contact .info-item i {
+      color: #22c55e !important;
+      background-color: #1e1e1e !important; /* Iconos con fondo oscuro */
+    }
+    .contact .info-item:hover i {
+      background-color: #22c55e !important;
+      color: #1e1e1e !important;
+    }
+
+    /* Caja derecha (Formulario) */
+    .contact .php-email-form {
+      background-color: #2d2d2d !important;
+      padding: 30px !important;
+      border-radius: 12px !important;
+      border: 1px solid #3d3d3d !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+    }
+    .contact .php-email-form label {
+      color: #ffffff !important; /* Etiquetas del formulario (Tu Nombre, etc) en blanco */
+      font-weight: 500;
+    }
+    .contact .php-email-form input, 
+    .contact .php-email-form textarea {
+      background-color: #1e1e1e !important; /* Fondo del input oscuro */
+      border: 1px solid #444444 !important;
+      color: #ffffff !important; /* Texto que el usuario escribe en blanco */
+    }
+    .contact .php-email-form input:focus, 
+    .contact .php-email-form textarea:focus {
       border-color: #22c55e !important;
       box-shadow: none !important;
     }
-    .php-email-form button[type=submit] {
+    .contact .php-email-form button[type=submit] {
       background: transparent !important;
       color: #22c55e !important;
       border: 2px solid #22c55e !important;
@@ -183,7 +227,7 @@
       box-shadow: none !important;
       transition: all 0.3s;
     }
-    .php-email-form button[type=submit]:hover {
+    .contact .php-email-form button[type=submit]:hover {
       background: #22c55e !important;
       color: #1e1e1e !important;
     }
@@ -652,7 +696,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- SCRIPT ELIMINADO: php-email-form/validate.js -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
