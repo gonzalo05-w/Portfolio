@@ -28,12 +28,114 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
+  * TEMA HACKER MATE (Gris oscuro + Verde Mate) - Detalles
   ======================================================== -->
+  <style>
+    /* 1. Fondo de la página y textos base */
+    body, .main, .section, .light-background {
+      background-color: #1e1e1e !important; 
+      color: #a3a3a3 !important; 
+    }
+    p, li, span, h5 {
+      color: #d4d4d4 !important; 
+    }
+
+    /* 2. Color acento: Verde terminal MATE */
+    h1, h2, h3, h4 {
+      color: #22c55e !important; 
+      font-family: 'Courier New', Courier, monospace !important; 
+      text-shadow: none !important; 
+    }
+    a {
+      color: #22c55e !important;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #4ade80 !important; 
+    }
+
+    /* 3. BARRA LATERAL IZQUIERDA */
+    .header .sitename {
+      color: #ffffff !important;
+    }
+    .navmenu a, .navmenu a i {
+      color: #ffffff !important;
+    }
+    .navmenu a:hover, .navmenu a.active, .navmenu a:hover i, .navmenu a.active i {
+      color: #22c55e !important; 
+    }
+    .social-links a {
+      color: #ffffff !important;
+      background: transparent !important;
+      border: 1px solid #ffffff !important;
+    }
+    .social-links a:hover {
+      background: #22c55e !important;
+      color: #1e1e1e !important;
+      border-color: #22c55e !important;
+    }
+
+    /* =========================================
+       ESTILOS ESPECÍFICOS PORTFOLIO DETAILS
+       ========================================= */
+
+    /* Cabecera de la página (Detalles Portfolio) */
+    .page-title {
+      background-color: #111111 !important; /* Gris más oscuro para el título superior */
+      border-bottom: 1px solid #3d3d3d;
+    }
+    .page-title h1 {
+      color: #ffffff !important;
+    }
+    .breadcrumbs ol li a {
+      color: #22c55e !important; /* Link a "Inicio" en verde */
+    }
+    .breadcrumbs ol li.current {
+      color: #a3a3a3 !important; /* Texto actual en gris claro */
+    }
+    .breadcrumbs ol li + li::before {
+      color: #a3a3a3 !important; /* Separador "/" */
+    }
+
+    /* Caja lateral: Información proyecto */
+    .portfolio-info {
+      background-color: #2d2d2d !important;
+      padding: 30px !important;
+      border-radius: 12px !important;
+      border: 1px solid #3d3d3d !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+    }
+    .portfolio-info h3 {
+      color: #22c55e !important;
+      border-bottom: 1px solid #3d3d3d !important;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+    .portfolio-info ul li {
+      color: #d4d4d4 !important;
+    }
+    .portfolio-info ul li strong {
+      color: #ffffff !important; /* Negritas en blanco puro */
+    }
+
+    /* Caja inferior: Descripción del proyecto */
+    .portfolio-description h2 {
+      color: #22c55e !important;
+    }
+    .portfolio-description p {
+      color: #d4d4d4 !important;
+    }
+
+    /* Puntitos del carrusel de imágenes (Swiper) */
+    .swiper-pagination-bullet {
+      background-color: #a3a3a3 !important;
+      opacity: 0.5 !important;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #22c55e !important; /* Punto activo en verde */
+      opacity: 1 !important;
+    }
+  </style>
 </head>
 
 <body class="portfolio-details-page">
@@ -46,8 +148,6 @@
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">Gonzalo Bretón García</h1>
     </a>
 
@@ -192,6 +292,7 @@
               <h2>Meditrack.</h2>
               <p>
                 Esta aplicación esta diseñada para el control de pacientes, habitaciones, medicamentos y dosis en un hospital. El objetivo principal de esta aplicación, es reducir los erroes humanos a la hora de preescribir los medicamentos a los pacientes.
+              </p>
             </div>
           </div>
 
@@ -210,10 +311,6 @@
         <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
       </div>
     </div>
@@ -228,7 +325,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
