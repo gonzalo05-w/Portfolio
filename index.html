@@ -180,14 +180,14 @@
       box-shadow: none !important;
     }
     .contact .info-item h3 {
-      color: #ffffff !important; /* Títulos en blanco */
+      color: #ffffff !important; 
     }
     .contact .info-item p {
-      color: #d4d4d4 !important; /* Textos en blanco/gris claro */
+      color: #d4d4d4 !important; 
     }
     .contact .info-item i {
       color: #22c55e !important;
-      background-color: #1e1e1e !important; /* Iconos con fondo oscuro */
+      background-color: #1e1e1e !important; 
     }
     .contact .info-item:hover i {
       background-color: #22c55e !important;
@@ -203,14 +203,14 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
     }
     .contact .php-email-form label {
-      color: #ffffff !important; /* Etiquetas del formulario (Tu Nombre, etc) en blanco */
+      color: #ffffff !important; 
       font-weight: 500;
     }
     .contact .php-email-form input, 
     .contact .php-email-form textarea {
-      background-color: #1e1e1e !important; /* Fondo del input oscuro */
+      background-color: #1e1e1e !important; 
       border: 1px solid #444444 !important;
-      color: #ffffff !important; /* Texto que el usuario escribe en blanco */
+      color: #ffffff !important; 
     }
     .contact .php-email-form input:focus, 
     .contact .php-email-form textarea:focus {
@@ -644,7 +644,8 @@
           </div>
           
           <div class="col-lg-7">
-            <form action="https://formsubmit.co/gonzalobretongarcia05@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <!-- Formulario EmailJS (ID añadido) -->
+            <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
                 <div class="col-md-6">
                   <label for="name-field" class="pb-2">Tu Nombre</label>
@@ -663,9 +664,6 @@
                   <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
                 </div>
                 <div class="col-md-12 text-center">
-                  <input type="hidden" name="_subject" value="Nuevo mensaje desde tu Portfolio!">
-                  <input type="hidden" name="_next" value="https://gonzalo05-w.github.io/Portfolio/">
-                  <input type="hidden" name="_captcha" value="false">
                   <button type="submit">Enviar Mensaje</button>
                 </div>
               </div>
@@ -707,6 +705,38 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- =======================================================
+  * EMAILJS SCRIPT (Para enviar los correos a tu cuenta)
+  ======================================================== -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // Inicializar EmailJS con tu Public Key
+      emailjs.init({ publicKey: "njE1WfQbRlJmgCrcd" });
+    })();
+  </script>
+  
+  <script type="text/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita que la página recargue
+        
+        const btn = this.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = 'Enviando...'; // Cambia el texto para avisar al usuario
+
+        // Reemplaza PON_AQUI_TU_TEMPLATE_ID por tu Template ID (ej. template_xxxxx)
+        emailjs.sendForm('service_mvepgw6', 'PON_AQUI_TU_TEMPLATE_ID', this)
+            .then(() => {
+                alert('¡Mensaje enviado correctamente!');
+                btn.innerHTML = originalText;
+                document.getElementById('contact-form').reset(); // Limpia el formulario
+            }, (error) => {
+                alert('Hubo un error al enviar el mensaje: ' + JSON.stringify(error));
+                btn.innerHTML = originalText;
+            });
+    });
+  </script>
 
 </body>
 
